@@ -1,13 +1,21 @@
 package main
 
 import (
+	"aoc/internal/day01"
 	"aoc/internal/day02"
+	"aoc/internal/day03"
 	"fmt"
 )
 
 func main() {
-	a, b := day02.Run()
+	var days = []func() (string, string){
+		day01.Run,
+		day02.Run,
+		day03.Run,
+	}
 
-	fmt.Printf("P1: %v\n", a)
-	fmt.Printf("P2: %v\n", b)
+	for i, fun := range days {
+		a, b := fun()
+		fmt.Printf("[Day %v] %16v :: %16v\n", i+1, a, b)
+	}
 }

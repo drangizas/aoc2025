@@ -1,7 +1,6 @@
 package day02
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -16,7 +15,6 @@ func Part2(input string) string {
 
 		for i := from; i <= to; i++ {
 			if containsSequence(strconv.Itoa(i)) {
-				fmt.Printf("Invalid ID: %v\n", i)
 				totalSum += i
 			}
 		}
