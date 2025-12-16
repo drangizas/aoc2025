@@ -4,6 +4,7 @@ import (
 	"aoc/internal/day01"
 	"aoc/internal/day02"
 	"aoc/internal/day03"
+	"aoc/internal/day04"
 	"fmt"
 )
 
@@ -12,6 +13,7 @@ func main() {
 		day01.Run,
 		day02.Run,
 		day03.Run,
+		day04.Run,
 	}
 
 	for i, fun := range days {
